@@ -68,6 +68,10 @@ ideal. The results of calibrated canny edge algorithms can be seen below [2].
 The Big O analysis of this function would also be O(n) since it is an iterative function through the pixels to determine if it has the qualities of an
 edge. This function is most effective when the image has been cleaned and processed which is another O(n) analysis.
 
+The exact accuracy depends on the characteristics of the golf ball and how they are picked up by the camera as well as the environment the golf ball is in.
+The parameters of both these algorithms can be precisely calibrated for the given object as seen in the images from other's expirements above to accurately
+detect the desired option.
+
 *Distance and Coordinates*
 
 The distance of the object can be found using another iterative function for another linear algorithm. The camera returns an array with the depth of each 
@@ -92,18 +96,33 @@ height per pixel = 4.61/1080 * 12 = 0.004265 feet/pixel = 0.05118 inches/pixel
 The amount of inches for the width and height repersented by the pixels can be used to find out the x and y coordinates by multiplying the pixels by the
 numbers provided [3 & 4]. The x and y coordinates can then be found by determining the pixel's coordinate in the image based on the array value of the
 pixel from the original image. Then, use the calculated pixel repersentation to multiple the image coordinate with the real world repersentation. This 
-should provide the real world x and y coordinates of the object. Six feet is the maximum distance the golf ball will be from the camera, so the one inch of
-error will be achievable. These calculations are basic arthemetic and should be O(1). Counting the pixels is another O(n) operation, but the n number of
-pixels is significantly smaller due to the altered array from detecting the object.
+should provide the real world x and y coordinates of the object. At six feet, the golf ball will only be repersented by 36 pixels. Six feet is the maximum
+distance the golf ball will be from the camera, so the one inch of error will be achievable. There is a 19 pixel buffer for motion blur and pixels blurring
+together. Using the standard margin of error equation in statistics 
+
+ME = Z * σ/square root of n 
+
+where Z is the typical confidence interval of 1.96, σ is the standard deviation for the algorithm which is 0.5, and n is the number of frames which will be
+1. Plugging these values in gives this result
+
+ME = 1.96 * 0.5/1 = 0.98 pixels 
+
+for the pixel measurments this is
+
+0.05118 * 0.98 = 0.050764 inches for the height and 0.05155 * 0.98 = 0.050519 inches for the width
+
+This means you can expect about a pixel's worth of error for each pixel. This combined with taking all the pixel locations and averagingthem together will
+provide a one inch accuracy for the golf ball's position. These calculations are basic arthemetic and should be O(1). Counting the pixels is another O(n)
+operation, but the n number of pixels is significantly smaller due to the altered array from detecting the object.
 
 *Speed*
 
 The camera that is being used is an 1920 by 1080 pixels. Benchmarks for the Jetson Nano Developer Kit show that for a 1920 by 1080 pixel image can resize
 images in 10 ms [6]. This is an iterative process with O(n) time so it can be assumed other iterative processes with similar computation complexities will
-have the same runtime. The function for cleaning up the image, assigning an edge value to each pixel, finding the countours, and any neccessary filtering
-are all iterative. Each will run for 10 ms for a total of 40 ms to detect the golf ball. The camera takes in 30 frames per second so it takes 33.33 ms to
-get a new image. The USB cord connecting the processor and camera processes data at 5 Gbs. Each pixel is 8 bits and has 2 color repersentation bytes so the
-total is 
+have the same runtime. The function for color detections, cleaning up the image, assigning an edge value to each pixel, finding the countours, and any 
+neccessary filtering are all iterative. Each will run for 10 ms for a total of 50 ms to detect the golf ball. The camera takes in 30 frames per second so
+it takes 33.33 ms to get a new image. The USB cord connecting the processor and camera processes data at 5 Gbs. Each pixel is 8 bits and has 2 color
+repersentation bytes so the total is 
 
 8 * 2 * 1080 * 1920 = 0.03318 Gb. 
 
@@ -115,7 +134,7 @@ The arithmetic processes for determining speed and other calculations to send to
 factor is how long it takes to get two positions. 
 
 
-33.33 ms + 6.64 ms + 40 ms + 33.33 ms + 6.64 ms + 40 ms = 159.94 ms. 
+33.33 ms + 6.64 ms + 50 ms + 33.33 ms + 6.64 ms + 50 ms = 179.94 ms. 
 
 This time period is well within the almost 1/8 time of the ball's travel given for the data to be collected and processed for the aiming and launching. It
 gives nearly 7/8 of the remaining time to determine the speed and location of the ball which will then be used to aim and intercept the ball. Atfter the
