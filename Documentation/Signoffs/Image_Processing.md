@@ -38,7 +38,7 @@ The system is purely software. Any connections for the processor should be shown
 
 A flow chart of the code is given below.
 
-![Function](../Images/Image_Processing/flow_chart.PNG)
+![Function](../Images/Image_Processing/FlowChart.PNG)
 
 This shows the steps for each major calculation and what is necessary for each calculation. This process will be done twice to recieve two positions for the
 speed calculation done by the processor.
@@ -116,7 +116,7 @@ together. Using the standard margin of error equation in statistics
 ME = Z * σ/square root of n 
 
 where Z is the typical confidence interval of 1.96, σ is the standard deviation for the algorithm which is 0.5, and n is the number of frames which will be
-1. Plugging these values in gives this result
+one. Plugging these values in gives this result
 
 ME = 1.96 * 0.5/1 = 0.98 pixels 
 
