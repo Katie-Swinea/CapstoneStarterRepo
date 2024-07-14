@@ -15,19 +15,11 @@ The goal of this subsystem is to receive and process the data from the camera se
 1. In order for the system to properly detect the golf ball and extract the necessary information for aiming, the system needs to distinguish the golf ball
    from the rest of the image. Illumination techniques will also be used with lights on the device to increase the contrast between the object and the
    background. Then, edge and countour detection techniques will be used to find the golf ball based on it's round shape.
-2. This can be done for both an inch to the left and an inch to the right for the x coordinate and an inch above or below for the y. The possible
-   coordinates for the ball on the wire will be stored in the processor. The coordinates can be compared to a known wire coordinate of x,y and compare the
-   identified value, repersented as x', x'+1, and x'-1 to find out which x coordinate the ball is located at. The same can then be done with the y
-   coordinate to find its value. The addition and subtraction comparisons will also be adjusted where if x'+1 is either equal to x or greater than x
-   and less than or equal to x+1 and x'-1 is either equal to x or less than x and greater than or eqaul to x-1 if the difference is less than an inch
-   between them. If x = x' then the value will be what was detected without a correction being performed. If it was two inches of error, the ball could be
-   two inches to the right or left and could be one of two wires using this method. If each x value is four inches apart, x'-2 could be equal to x1-2 and
-   x2+2. An example of this would be if x' is 3, x1 is 5, and x2 is 1. The error margin would allow the determination of the exact wire the golf ball is on
-   to be made. This would make the proper wire detection indeterminable. If given the same wire locations and x' as 4 since the error is now one inch, the
-   wire can now be determined as x1 since x'+1 is equal to x. The variable height differs by seven inches, so an inch away from the correct variable height
-   can be corrected to the proper height from the data as well using the same logic and processes. A correction to the closest possible coordinates of the
-   golf ball can be made from the detection with an error of one inch. This has to be done at the furthest point to ensure enough time is left to perform
-   calculations and intercept the incoming golf ball.
+2. The position of the wires are four inches apart from six feet away. Because of this, the error cannot be two inches because if it is in between two
+   wires, there is no way to know if it is two inches to the right or left. However, if the error is one inch to the right or left of a wire, it will still
+   be closest to the wire it is on. All pixels need to have the same error. Since the two heights are seven inches apart, the wire positions are the
+   constricting factor. The ball has to be detected as soon as it is released for the interceptor to have enough time to launch to projectile. Thus, one
+   inch of error is allowed for the detection of the golf ball. 
 3. The fastest speed of the golf ball is 1.95 seconds based on empirical data from the customer. The ball needs to be detected in enough time for the
    launcher to aim and launch the projectile. This minimum allows time for the motors to make adjustments and fire after the information has been recieved
    and interpreted which is expected to take half a second each. It also allows the speed calculation to take 250 ms as well.
