@@ -69,8 +69,21 @@ The Big O analysis of this function would also be O(n) since it is an iterative 
 edge. This function is most effective when the image has been cleaned and processed which is another O(n) analysis.
 
 The exact accuracy depends on the characteristics of the golf ball and how they are picked up by the camera as well as the environment the golf ball is in.
-The parameters of both these algorithms can be precisely calibrated for the given object as seen in the images from other's expirements above to accurately
-detect the desired option.
+The parameters of both these algorithms can be precisely calibrated for the given object as seen in the images from other's expirements and several
+simulations available. Using these tools, I was able to simulate finding small, round objects in a picture. The results can be seen below.
+
+![Function](../Images/Image_Processing/Simulation1.PNG)
+
+Results of alterating the thresholds for detection can be seen below for finding more perfectly round objects which can be seen below.
+
+![Function](../Images/Image_Processing/Simulation2.PNG)
+
+Finally, the thresholds can even be altered to distinguish between slight differences in the exact edges and contours of the image which can be seen below
+[3].
+
+![Function](../Images/Image_Processing/Simulation3.PNG)
+
+Because of this accuracy with thresholds and parameters and the perserved shapes from color detection, the golf ball should be able to be detected and recoginzed by the camera via these image processing techniques.
 
 *Distance and Coordinates*
 
@@ -94,7 +107,7 @@ width per pixel = 8.25/1920 = 0.004296 feet/pixel * 12 = 0.05155 inches/pixel
 height per pixel = 4.61/1080 * 12 = 0.004265 feet/pixel = 0.05118 inches/pixel
 
 The amount of inches for the width and height repersented by the pixels can be used to find out the x and y coordinates by multiplying the pixels by the
-numbers provided [3 & 4]. The x and y coordinates can then be found by determining the pixel's coordinate in the image based on the array value of the
+numbers provided [4 & 5]. The x and y coordinates can then be found by determining the pixel's coordinate in the image based on the array value of the
 pixel from the original image. Then, use the calculated pixel repersentation to multiple the image coordinate with the real world repersentation. This 
 should provide the real world x and y coordinates of the object. At six feet, the golf ball will only be repersented by 36 pixels. Six feet is the maximum
 distance the golf ball will be from the camera, so the one inch of error will be achievable. There is a 19 pixel buffer for motion blur and pixels blurring
@@ -118,7 +131,7 @@ operation, but the n number of pixels is significantly smaller due to the altere
 *Speed*
 
 The camera that is being used is an 1920 by 1080 pixels. Benchmarks for the Jetson Nano Developer Kit show that for a 1920 by 1080 pixel image can resize
-images in 10 ms [6]. This is an iterative process with O(n) time so it can be assumed other iterative processes with similar computation complexities will
+images in 10 ms [7]. This is an iterative process with O(n) time so it can be assumed other iterative processes with similar computation complexities will
 have the same runtime. The function for color detections, cleaning up the image, assigning an edge value to each pixel, finding the countours, and any 
 neccessary filtering are all iterative. Each will run for 10 ms for a total of 50 ms to detect the golf ball. The camera takes in 30 frames per second so
 it takes 33.33 ms to get a new image. The USB cord connecting the processor and camera processes data at 5 Gbs. Each pixel is 8 bits and has 2 color
@@ -151,13 +164,15 @@ This subsystem is implemented as part of the processor. All camera and lighting 
 
 [2] C. Writer, “Edge detection in image processing: An introduction,” Roboflow Blog, https://blog.roboflow.com/edge-detection/ (accessed Jun. 29, 2024). 
 
-[3] R. Awati, “What is field of view (FOV)?,” WhatIs, https://www.techtarget.com/whatis/definition/field-of-view-FOV (accessed Apr. 20, 2024). 
+[3] “Big | image processing online demonstration | canny edge detector,” Image Web Demonstrations, https://bigwww.epfl.ch/demo/ip/demos/edgeDetector/ (accessed Jul. 14, 2024). 
 
-[4] “Understanding image quality on the MV32,” Cisco Meraki Documentation,
+[4] R. Awati, “What is field of view (FOV)?,” WhatIs, https://www.techtarget.com/whatis/definition/field-of-view-FOV (accessed Apr. 20, 2024). 
+
+[5] “Understanding image quality on the MV32,” Cisco Meraki Documentation,
 https://documentation.meraki.com/MV/Viewing_Video/Understanding_Image_Quality_on_the_MV32 (accessed Apr. 20, 2024). 
 
-[5] “How to measure pixel size for image processing? | Researchgate,” ResearchGate,
+[6] “How to measure pixel size for image processing? | Researchgate,” ResearchGate,
 https://www.researchgate.net/post/How_to_measure_pixel_size_for_image_processing (accessed Apr. 20, 2024). 
 
-[6] F. Serzhenko, “✅ Jetson nano benchmarks for image processing,” fastcompression.com - GPU Image Processing Software,
+[7] F. Serzhenko, “✅ Jetson nano benchmarks for image processing,” fastcompression.com - GPU Image Processing Software,
 https://www.fastcompression.com/blog/jetson-nano-benchmarks-image-processing.htm (accessed Apr. 15, 2024). 
