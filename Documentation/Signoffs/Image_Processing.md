@@ -39,7 +39,7 @@ speed calculation done by the processor.
 
 *Detection*
 
-The golf ball will be illuminated with lights from the device. This will allow the object to be tracked using color since the white golf ball can be
+The golf ball will be illuminated with lights from the device. This will allow the object to be detected using color since the white golf ball can be
 distinguished from the light altered background. This can be done using hue, saturation, and variation color detection. The boundaries for the color are
 determined and entered in as limits. These parameters and the image are then sent to a function called inRange. This will apply a mask to the array of 
 pixels repersenting the image with a mask to determine the objects with the color. The results of such operations and algorithms can be seen below to
@@ -47,13 +47,15 @@ detect a light color like grey.
 
 ![Function](../Images/Image_Processing/Detecting_Grey.png)
 
-This can be adjusted to detect the ball at longer distances when the amount of pixels repersenting the object are smaller. The Big O analysis of this
-function would be O(n) because it is an iterative function that will go through all of the pixels provided [1].
+This can be adjusted to detect the a white ball be adjusting the saturation parameters for the color detection. The algorithm's parameters the number of
+pixels with the same attribute can also be adjusted to detect smaller objects like the golf.The Big O analysis of this function would be O(n) because it
+is an iterative function that will go through all of the pixels provided [1].
 
-Once the golf ball has been detected based on color, the pixels repersenting the color can have an edge detection algorithm applied to it. The canny edge
-detection would be best suited for this since it not only filters our non-edges but also sets edges as weak and strong. The golf ball will have very
-strong, round edges making it highly detectable by the algorithm. The adjustable ranges to define an edge used by the open sources cv function also make it
-ideal. The results of calibrated canny edge algorithms can be seen below [2].
+Once the golf ball has been detected based on color, the pixels repersenting the color can have an edge detection algorithm applied to it. With the
+contrast from the lights, the features of the golf ball will be very distinct from any other pixels, that are not repersenting the golf ball, in the color\
+detection results. The canny edge detection would be best suited for this since it not only filters our non-edges but also sets edges as weak and strong.
+The golf ball will have very strong, round edges making it highly detectable by the algorithm. The adjustable ranges to define an edge used by the open
+sources cv function also make it ideal. The results of calibrated canny edge algorithms can be seen below [2].
 
 ![Function](../Images/Image_Processing/Edge_Detection.PNG)
 
