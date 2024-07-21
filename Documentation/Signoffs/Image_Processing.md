@@ -47,15 +47,16 @@ detect a light color like grey.
 
 ![Function](../Images/Image_Processing/Detecting_Grey.png)
 
-This can be adjusted to detect the a white ball be adjusting the saturation parameters for the color detection. The algorithm's parameters the number of
-pixels with the same attribute can also be adjusted to detect smaller objects like the golf.The Big O analysis of this function would be O(n) because it
-is an iterative function that will go through all of the pixels provided [1].
+This can be adjusted to detect the a white ball be adjusting the saturation parameters for the color detection. The algorithm's parameters for the
+intensity of the color can also be adjusted. The Big O analysis of this function would be O(n) because it is an iterative function that will go through all
+of the pixels provided [1].
 
 Once the golf ball has been detected based on color, the pixels repersenting the color can have an edge detection algorithm applied to it. With the
-contrast from the lights, the features of the golf ball will be very distinct from any other pixels, that are not repersenting the golf ball, in the color\
-detection results. The canny edge detection would be best suited for this since it not only filters our non-edges but also sets edges as weak and strong.
-The golf ball will have very strong, round edges making it highly detectable by the algorithm. The adjustable ranges to define an edge used by the open
-sources cv function also make it ideal. The results of calibrated canny edge algorithms can be seen below [2].
+contrast from the added lighting that will be implemented, the features of the golf ball will be distinct from any other pixels not representing the golf
+ball in the color detection results, similar to how the grey triangle on the game cartridge is still distinguishable in the picture above. The canny edge
+detection would be best suited for this since it not only filters our non-edges but also sets edges as weak and strong. The golf ball will have very
+strong, round edges making it highly detectable by the algorithm. The adjustable ranges to define an edge used by the open sources cv function also make it
+ideal. The results of calibrated canny edge algorithms can be seen below [2].
 
 ![Function](../Images/Image_Processing/Edge_Detection.PNG)
 
@@ -68,7 +69,7 @@ simulations available. Using these tools, I was able to simulate finding small, 
 
 ![Function](../Images/Image_Processing/Simulation1.PNG)
 
-Results of alterating the thresholds for detection can be seen below for finding more perfectly round objects which can be seen below.
+Results of altering the thresholds for detection can be seen below for finding more perfectly round objects which can be seen below.
 
 ![Function](../Images/Image_Processing/Simulation2.PNG)
 
@@ -125,7 +126,11 @@ operation, but the n number of pixels is significantly smaller due to the altere
 *Speed*
 
 The camera that is being used is an 1920 by 1080 pixels. Benchmarks for the Jetson Nano Developer Kit show that for a 1920 by 1080 pixel image can resize
-images in 10 ms [7]. This is an iterative process with O(n) time so it can be assumed other iterative processes with similar computation complexities will
+images in 10 ms [7]. 
+
+![Function](../Images/Image_Processing/Benchmarks.PNG)
+
+This is an iterative process with O(n) time so it can be assumed other iterative processes with similar computation complexities will
 have the same runtime. The function for color detections, cleaning up the image, assigning an edge value to each pixel, finding the countours, and any 
 neccessary filtering are all iterative. Each will run for 10 ms for a total of 50 ms to detect the golf ball. The camera takes in 30 frames per second so
 it takes 33.33 ms to get a new image. The USB cord connecting the processor and camera processes data at 5 Gbs. Each pixel is 8 bits and has 2 color
