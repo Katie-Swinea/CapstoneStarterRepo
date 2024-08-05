@@ -111,18 +111,18 @@ together. Using the standard margin of error equation in statistics
 
 ME = Z * σ/square root of n 
 
-where Z is the typical confidence interval of 1.96, σ is the standard deviation for the algorithm which is 0.5, and n is the number of frames which will be
-one. Plugging these values in gives this result
+where Z is the typical confidence interval of 1.96, σ is the highest filter value for the algorithm, which has been set in simulations as 10, and n is the
+number of frames which will be one. Plugging these values in gives this result
 
-ME = 1.96 * 0.5/1 = 0.98 pixels 
+ME = 1.96 * 10/1 = 19.6 pixels 
 
 for the pixel measurements this is
 
-0.05118 * 0.98 = 0.050764 inches for the height and 0.05155 * 0.98 = 0.050519 inches for the width
+0.05118 * 19.6 = 1.00 inches for the height and 0.05155 * 19.6 = 1.01 inches for the width
 
-This means you can expect about a pixel's worth of error for each pixel. This combined with taking all the pixel locations and averaging them together will
-provide a one inch accuracy for the golf ball's position. These calculations are basic arithmetic and should be O(1). Counting the pixels is another O(n)
-operation, but the n number of pixels is significantly smaller due to the altered array from detecting the object.
+Lower sigma values also detect smaller objects more accurately, so the actual error is expected to be much lower. This combined with taking all the pixel
+locations and averaging them together will provide a one inch accuracy for the golf ball's position. These calculations are basic arithmetic and should be
+O(1). Counting the pixels is another O(n) operation, but the n number of pixels is significantly smaller due to the altered array from detecting the object.
 
 *Speed*
 
