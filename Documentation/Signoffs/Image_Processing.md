@@ -132,10 +132,11 @@ images in 10 ms [7].
 ![Function](../Images/Image_Processing/Benchmarks.PNG)
 
 This is an iterative process with O(n) time so it can be assumed other iterative processes with similar computation complexities will
-have the same runtime. The function for color detections, cleaning up the image, assigning an edge value to each pixel, finding the contours, and any 
-necessary filtering are all iterative. Each will run for 10 ms for a total of 50 ms to detect the golf ball. The camera takes in 30 frames per second so
-it takes 33.33 ms to get a new image. The USB cord connecting the processor and camera processes data at 5 Gbs. Each pixel is 8 bits and has 2 color
-representation bytes so the total is 
+have the same runtime. The function for color detections, applying Gaussain blur, assigning an edge value to each pixel, and finding the contours are all
+iterative. The computations needed for each of this functions are also pretty similar to each other and the resize algorithm used in the benchmarks above.
+The higher resolution resize is more computationally intensive, so it's runtime will be used. Each will run for 19.8 ms for a total of 79.2 ms to detect
+the golf ball. The camera takes in 30 frames per second so it takes 33.33 ms to get a new image. The USB cord connecting the processor and camera processes
+data at 5 Gbs. Each pixel is 8 bits and has 2 color representation bytes so the total is 
 
 8 * 2 * 1080 * 1920 = 0.03318 Gb. 
 
@@ -147,7 +148,7 @@ The arithmetic processes for determining speed and other calculations to send to
 factor is how long it takes to get two positions. 
 
 
-33.33 ms + 6.64 ms + 50 ms + 33.33 ms + 6.64 ms + 50 ms = 179.94 ms. 
+33.33 ms + 6.64 ms + 79.2 ms + 33.33 ms + 6.64 ms + 79.2 ms = 238.34 ms. 
 
 This time period is well within the almost 1/8 time of the ball's travel given for the data to be collected and processed for the aiming and launching. It
 gives nearly 7/8 of the remaining time to determine the speed and location of the ball which will then be used to aim and intercept the ball. After the
