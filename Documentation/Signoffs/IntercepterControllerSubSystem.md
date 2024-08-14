@@ -17,7 +17,7 @@ The goal of this subsystem is to activate the position motors and firing mechani
 |4|Must change direction of the motors in the Mechanical's section |Conceptual Design|
 |5|Must maintain safe firing speed and distance|Conceptual Design/Rule Book|
 |6|Must change position before incoming object enters the "kill zone"| Conceptual Design|
-|7|Must fire at incoming object before it can make contact will the device| Conceptual Design/Rule Book|
+
 
 
 
@@ -26,7 +26,8 @@ The goal of this subsystem is to activate the position motors and firing mechani
 3.	Using the 5V pin on the processor to power the adruino.
 4.  To be able to move to the correct coordinates the motors need to move in either direction along the x and y axis.
 5.  Per Devcom rule books the projectile must be fired at a safe speed and stay within a distance of 6ft *this speed will be found by the ME team*
-6. 
+6.  Based off calculations made with the dimensions of the game board it will take the projectile approximately 1.95 seconds to 7.4 seconds to travel down the line given the two different height points. However, after subtracting the worst-case scenario with sensing, processing, and travel time this leaves 1.6 seconds for the firing mechanism to move into position and fire at the object before collision.
+
 
 ## **Buildable Schematics:**
 
@@ -52,9 +53,9 @@ Figure 3[1]
 
 |Device|Description|Used in which subsystem|Part Number| Manufacturer|Quantity|Price|Total|
 |-------|---|---------|-------------|----|----|----|----|
-| Arduino UNO R3 |converts analog data to digital inputs to move motors|Interceptor Controller Subsystem|A000066| Arduino|1|$27.60|$27.60|
+| Arduino UNO R3 |converts analog data to digital inputs to move motors|Interceptor Controller Subsystem|A000066| Arduino|3|$27.60|$82.80|
 |TB6600 Stepper Motor Driver|Regulates current and keeps from going reverse bias, and divides rotation into equal steps|Interceptor Controller Subsystem & Mechanical Subsystem|TB6600|DFRobot|0||purchased by ME team|
-| | | | | | |Final Total|$27.60|
+| | | | | | |Final Total|$82.80|
 
 ## **References:**
 [1] Arduino, https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf (accessed Apr. 17, 2024). 
