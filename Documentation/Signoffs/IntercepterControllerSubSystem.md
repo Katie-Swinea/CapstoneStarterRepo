@@ -5,7 +5,7 @@
 
 Figure 1: Interceptor Controller Subsystem
 
-The Mechanical System requires a bridge between their motors that uses the Stepper Motor Driver they have purchased and our processer. To do this the Arduino will be used as the bridge to convert the analog outputs from the processer to digital outputs to control the driver so it can move the firing mechanism to a firing position, send a analog signal back to the processer to initiate firing at the incoming projectile, and maintain firing speed.
+The goal of this subsystem is to activate the position motors and firing mechanism within the mechanical system, maintain safe firing speed, as well as alleviate some of the coding within the processor. 
 
 ## **Constraints:**
 
@@ -14,18 +14,20 @@ The Mechanical System requires a bridge between their motors that uses the Stepp
 |1|The Interceptor Controller shall move firing mechanism to 1 of 30 pre set locations |Conceptual Design|
 |2|Must communicate with processor| Conceptual Design |
 |3|Shall receive 5V power supply from processor| Conceptual Design|
-|4|Must change speed and direction of the motors in the Mechanical's section |Conceptual Design|
-|5|Must maintain safe firing speed and distance|Conceptual Design|
-|6|Must supply a 5V power supply to Stepper Motor Driver| Device design|
+|4|Must change direction of the motors in the Mechanical's section |Conceptual Design|
+|5|Must maintain safe firing speed and distance|Conceptual Design/Rule Book|
+|6|Must change position before incoming object enters the "kill zone"| Conceptual Design|
+|7|Must fire at incoming object before it can make contact will the device| Conceptual Design/Rule Book|
 
 
 
-1.	Using the data sent by the processor it converts it to digital as coordinates that correspond to 1 of 30 set positions.
-2.	After completing the movement to the desired position, a signal is sent back, and recieve data from the processor.
-3.	Using the 5V pin from the processor to power the device.
-4.  To be able to move to the correct coordinates the motors need to move in either direction along the x and y axis. This is also needed for testing the speed in which it must fire at and the speed it takes to move in to position.
+1.	Using the sensor data analyzed by the processor the arduino activates the 2 position motors to move to 1 of 30 set positions.
+2.	After completing the movement to the desired position, and the projectile is within set "kill zone", the firing mechanism is engaged firing only one shot.
+3.	Using the 5V pin on the processor to power the adruino.
+4.  To be able to move to the correct coordinates the motors need to move in either direction along the x and y axis.
 5.  Per Devcom rule books the projectile must be fired at a safe speed and stay within a distance of 6ft *this speed will be found by the ME team*
-6. The Stepper Motor Driver will be powered using the arduino.
+6. 
+
 ## **Buildable Schematics:**
 
 ![Elaboration Photo](../Images/Controllers/Schematic3.png)
