@@ -13,8 +13,7 @@ The goal of this subsystem is to receive and process the data from the camera se
 | 3| Must be able to receive the data and perform calculations in 250 ms to allow the interceptor time to aim and shoot based on the calculations| System Requirement|
 
 1. In order for the system to properly detect the golf ball and extract the necessary information for aiming, the system needs to distinguish the golf ball
-   from the rest of the image. Illumination techniques will also be used with lights on the device to increase the contrast between the object and the
-   background. Then, edge and contour detection techniques will be used to find the golf ball based on it's round shape.
+   from the rest of the image. Then, edge and contour detection techniques will be used to find the golf ball based on it's round shape.
 2. The position of the wires are four inches apart from six feet away. Because of this, the error cannot be two inches because if it is in between two
    wires, there is no way to know if it is two inches to the right or left. However, if the error is one inch to the right or left of a wire, it will still
    be closest to the wire it is on. All pixels need to have the same error. Since the two heights are seven inches apart, the wire positions are the
@@ -39,11 +38,11 @@ speed calculation done by the processor.
 
 *Detection*
 
-The golf ball will be illuminated with lights from the device. This will allow the object to be detected using color since the white golf ball can be
-distinguished from the light altered background. This can be done using hue, saturation, and variation color detection. The boundaries for the color are
-determined and entered in as limits for each of these values. These parameters and the image are then sent to a function called inRange. This will apply a
-mask to the array of pixels representing the image with a mask to determine the objects with the color. The results of such operations and algorithms can
-be seen below to detect a light color like grey.
+The golf ball will have a unique color and shape combination that will allow the object to be detected. Using color since the white golf ball can be
+distinguished from other white objects while keeping its shape intact. This can be done using hue, saturation, and variation color detection. The 
+boundaries for the color are determined and entered in as limits for each of these values. These parameters and the image are then sent to a function 
+called inRange. This will apply a mask to the array of pixels representing the image with a mask to determine the objects with the color. The results of 
+such operations and algorithms can be seen below to detect a light color like grey.
 
 ![Function](../Images/Image_Processing/Detecting_Grey.png)
 
