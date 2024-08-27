@@ -10,7 +10,7 @@ The goal of this subsystem is to receive and process the data from the camera se
 |-----|---------------------------------------------------------------------|------------------|
 | 1| Must be able to distinguish the golf ball from surroundings based on golf ball's shape and color | System Requirement|
 | 2| Must be able to extract the x,y coordinates of the golf ball with an inch of accuracy to distinguish between the wires and variable height| System Requirement|
-| 3| Must be able to receive the data and perform calculations in 250 ms to allow the interceptor time to aim and shoot based on the calculations| System Requirement|
+| 3| Must be able to receive the data and perform calculations in 500 ms to allow the interceptor time to aim and shoot based on the calculations| System Requirement|
 
 1. In order for the system to properly detect the golf ball and extract the necessary information for aiming, the system needs to distinguish the golf ball
    from the rest of the image. Then, edge and contour detection techniques will be used to find the golf ball based on it's round shape.
