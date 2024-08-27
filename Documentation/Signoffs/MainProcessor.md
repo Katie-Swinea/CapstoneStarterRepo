@@ -11,8 +11,8 @@ The main processor unit is responsible for receiving, analyzing, and interpretin
 
 | NO. |	Constraint | Origin |
 |-----|------------|--------|
-| 1	| Time Constraints - Real-time data processing for trajectory prediction for the golf ball can take around 40 ms for each image. The main processor needs to calculate the ball data before the ball reaches the end which varies from 1.9 seconds to 7.4 seconds | System Constraint |
-| 2	| Processing Speed - The main processor scripts and programs have to be optimized for efficient calculations. The scripts get the speed, wire, and variable height from input data. These calculations should not take longer than 40 ms per calculation iteration | System Constraint |
+| 1	| Time Constraints - Real-time data processing for trajectory prediction for the golf ball can not take longer than the total time for each image. The main processor needs to calculate the ball data before the ball reaches the end which varies from 1.9 seconds to 7.4 seconds | System Constraint |
+| 2	| Processing Speed - The main processor scripts and programs have to be optimized for efficient calculations. The scripts get the speed, wire, and variable height from input data. These calculations should not take longer than their required time per calculation iteration | System Constraint |
 | 3	| Resource Utilization - Since the board has 1.43GHz with quad-cores and 4GB RAM, the main processor needs to be utilized properly to prevent an overload of system resources. The system needs to use all cores and not overload the RAM for speed efficiency but not sacrifice stability | System Constraint |
 | 4 | Pausing Processes: The system needs a pause state to stop other scripts from activating firing mechanisms. | Rulebook |
 
@@ -22,7 +22,7 @@ The main processor unit is responsible for receiving, analyzing, and interpretin
 
 **Time Constraints:** The Jetson Nano has a worst-case scenario of 1.9 seconds to find the golf ball and calculate and aim the interceptor's position before the ball reaches the end, given by Devcom. Real-time processing of sensor data and trajectory calculations impose time constraints on the Jetson Nano. Since it has to be able to detect and calculate the proper position of the ball. Its 1.43GHz quad-core ARM Cortex-A57 processor needs to be able to receive, process, calculate the interceptor’s path, and aim the interceptor before the golf ball gets too far down the string [3]. The ball's travel time varies from 1.9 seconds to 7.4 seconds and the programs and data transmission needs to be optimized for an accurate and efficient system to be able to run fast enough. Delays in data acquisition, processing, or interceptor firing may affect the interception accuracy dramatically [2].
 
-**Processing Speed:** The data gathered and calculated from the image processing is the worst case of 357.42ms from the image processing subsystem. The Jetson Nano needs to calculate and simultaneously send data to the firing mechanism Arduino. These tasks may strain the processing capabilities of the Jetson Nano, potentially leading to performance bottlenecks. The algorithms need to utilize the hardware and run scripts on multi-core to limit any speed limitations. Based on benchmarks used in image processing to find the position of the goldball will take 1.8ms for the moment calculations and 10ms for the centroid calculation [9]. This will give the X, and Y coordinates of the center of the goofball--giving the position of the golfball.
+**Processing Speed:** The data gathered and calculated from the image processing is the worst case of 357.42ms from the image processing subsystem. The Jetson Nano needs to calculate and simultaneously send data to the firing mechanism Arduino. These tasks may strain the processing capabilities of the Jetson Nano, potentially leading to performance bottlenecks. The algorithms need to utilize the hardware and run scripts on multi-core to limit any speed limitations. Based on benchmarks used in image processing to find the position of the goldball will take 1.8ms for the moment calculations and 10ms for the centroid calculation [10]. This will give the X, and Y coordinates of the center of the goofball--giving the position of the golfball. The assumption for comparison is linear time for 10ms making the total for each image 21.8ms. Since three images will be used to extract all the data, the final time will be 65.4ms for all three images.
 
 **Resource Utilization:** With a limited 4GB of LPDDR4 RAM, the Jetson Nano needs to use the resources but with image processing, it could easily have a resource overload. The memory and CPU load cannot be overloaded or the system's responsiveness will hinder its operation [2].
 
@@ -117,6 +117,6 @@ The Jetson Nano offers an affordable yet powerful solution for system control, p
 
 [8] “Toggle switches,” NTE Electronics, https://www.nteinc.com/switches/pdf/toggle-std.pdf (accessed Apr. 6, 2024).
 
-[9] K. Bapat, “Find center of a Blob (centroid) using opencv (c++/python),” LearnOpenCV, https://learnopencv.com/find-center-of-blob-centroid-using-opencv-cpp-python/ (accessed Aug. 27, 2024). 
-
 [9] S. Hall, Devcom. Devcom, 2024. S31 Paper Wad Interceptor Challenge 2024, Rulebook, (accessed Apr. 8, 2024).
+
+[10] K. Bapat, “Find center of a Blob (centroid) using opencv (c++/python),” LearnOpenCV, https://learnopencv.com/find-center-of-blob-centroid-using-opencv-cpp-python/ (accessed Aug. 27, 2024). 
