@@ -22,7 +22,7 @@ The main processor unit is responsible for receiving, analyzing, and interpretin
 
 **Time Constraints:** The Jetson Nano has a worst-case scenario of 1.9 seconds to find the golf ball and calculate and aim the interceptor's position before the ball reaches the end, given by Devcom. Real-time processing of sensor data and trajectory calculations impose time constraints on the Jetson Nano. Since it has to be able to detect and calculate the proper position of the ball. Its 1.43GHz quad-core ARM Cortex-A57 processor needs to be able to receive, process, calculate the interceptor’s path, and aim the interceptor before the golf ball gets too far down the string [3]. The ball's travel time varies from 1.9 seconds to 7.4 seconds and the programs and data transmission needs to be optimized for an accurate and efficient system to be able to run fast enough. Delays in data acquisition, processing, or interceptor firing may affect the interception accuracy dramatically [2].
 
-**Processing Speed:** The data gathered and calculated from the image processing is the worst case of 99.54ms from the image processing subsystem. The Jetson Nano needs to calculate and simultaneously send data to the firing mechanism Arduino. These tasks may strain the processing capabilities of the Jetson Nano, potentially leading to performance bottlenecks. The algorithms needs to utilize the hardware and run scripts on multi-core to limit any speed limitations.
+**Processing Speed:** The data gathered and calculated from the image processing is the worst case of 357.42ms from the image processing subsystem. The Jetson Nano needs to calculate and simultaneously send data to the firing mechanism Arduino. These tasks may strain the processing capabilities of the Jetson Nano, potentially leading to performance bottlenecks. The algorithms need to utilize the hardware and run scripts on multi-core to limit any speed limitations. Based on benchmarks used in image processing to find the position of the goldball will take 1.8ms for the moment calculations and 10ms for the centroid calculation [9]. This will give the X, and Y coordinates of the center of the goofball--giving the position of the golfball.
 
 **Resource Utilization:** With a limited 4GB of LPDDR4 RAM, the Jetson Nano needs to use the resources but with image processing, it could easily have a resource overload. The memory and CPU load cannot be overloaded or the system's responsiveness will hinder its operation [2].
 
@@ -56,7 +56,7 @@ Object Height = (4 inches * 730 pixels ) / ( 1080 pixels) + 42 inches
 = (2,920 pixel inches)/(1080 pixels) + 42 inches = 44.7 inches
 ~~~
 
-The Speed calculations will be taking the distance or position of the object over time [1]. The frames of the objects location can calculate the speed using the following equation. The speed calculations will be determined using different distances and time frames that have been sent from the image detection to figure out how fast the ball is traveling. While using backlogged data of testing speeds, the system will also figure out speeds and compare to increase the overall accuracy of the speed [1].
+The Speed calculations will be taking the distance or position of the object over time [1]. The frames of the objects location can calculate the speed using the following equation. The speed calculations will be determined using different distances and time frames sent from the image detection to determine how fast the ball is traveling. There will be 119.17ms between each retrieval of position, which will allow the calculation of speed. While using backlogged data of testing speeds, the system will also figure out speeds and compare to increase the overall accuracy of the speed [1].
 ~~~math
 Speed = (DistanceOne - DistanceTwo) / Change in Time Between Frames
 ~~~
@@ -116,5 +116,7 @@ The Jetson Nano offers an affordable yet powerful solution for system control, p
 [7] “Connecting Jetson Nano to Arduino Uno,” NVIDIA, https://forums.developer.nvidia.com/t/connecting-jetson-nano-to-arduino-uno/172775 (accessed Apr. 17, 2024).
 
 [8] “Toggle switches,” NTE Electronics, https://www.nteinc.com/switches/pdf/toggle-std.pdf (accessed Apr. 6, 2024).
+
+[9] K. Bapat, “Find center of a Blob (centroid) using opencv (c++/python),” LearnOpenCV, https://learnopencv.com/find-center-of-blob-centroid-using-opencv-cpp-python/ (accessed Aug. 27, 2024). 
 
 [9] S. Hall, Devcom. Devcom, 2024. S31 Paper Wad Interceptor Challenge 2024, Rulebook, (accessed Apr. 8, 2024).
