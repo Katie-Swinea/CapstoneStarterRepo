@@ -4,7 +4,7 @@
 
 Figure 1: Extra subsystem and the pause switch can be seen in this figure.
 
-- The goal of this subsystem is to implement a pause switch, make sounds before firing, and lights. The system needs a pause switch to deactivate it between rounds. This is needed to allow the judges to reset the gameboard. When the system is in the pause state the array of Green LED's will be lit up and when the system is in the run state the array of red LED's will be lit up. This will clearly indicate the launcher's current status. The 
+- The goal of this subsystem is to implement a pause switch, make sounds before firing, and lights. The system needs a pause switch to deactivate it between rounds. This is needed to allow the judges to reset the gameboard. When the system is in the pause state the array of Red LED's will be lit up and when the system is in the run state the array of Green LED's will be lit up. This will clearly indicate the launcher's current status. The launcher is active when the LED's are Green and inactive when the LED's are Red.
 
 ## **Constraints:**
 
@@ -15,7 +15,7 @@ Figure 1: Extra subsystem and the pause switch can be seen in this figure.
 | 3. | The interceptor must have lights that are bright enough to be seen by the judges approximately six and a half feet away, which is the longest length of the gameboard. Therefore the lights must have a candela rating greater than that of a fire alarm which is 15 cd [1]. These lights must also emit a light that falls within the visual light spectrum of 380 to 720 nanometers [2]. | Rulebook / System |
 | 4. | The interceptor must make sounds before firing. The sounds will need to fall within the range of frequency humans can hear which is 20 to 20,000Hz [3]. The volume, or loudness, must be 10db above the average of the room [3], which usually falls at 60 dB [3], in order for the judges to hear the sound. The sound must also not exceed 85dB for more than eight hours or it may cause hearing damage [3]. | Rulebook / Safety |
    
-1. One of the requirements in the rulebook, given to us by the customer, is that the interceptor needs to have a pause switch that keeps the interceptor from firing when the board is being reset. This switch will need to be physical, but in the implementation, it will run to the processor where it will prevent it from outputting any signals. When the switch is engaged it will keep the processor block from outputting signals to the mechanical system. This will ensure that the interceptor does not fire while the judges are in the competition area.
+1. One of the requirements in the rulebook, given to us by the customer, is that the interceptor needs to have a pause switch that keeps the interceptor from firing when the board is being reset. This switch will need to be physical, but in the implementation, it will run to the processor where it will prevent it from outputting any signals. When the switch is engaged it will keep the processor block from outputting signals to the mechanical system. This will ensure that the interceptor does not fire while the judges are in the competition area. The color red will indicate that the launcher is inactive and green will indicate that the launcher is active.
    
 2. The circuit that is implemented by the pause switch needs to fall within the limitations of the processor block. Based on the processors that could be chosen the voltage that will be switched will be 5V. This source will be connected to a PCB that will be connecting the circuit components.
 
