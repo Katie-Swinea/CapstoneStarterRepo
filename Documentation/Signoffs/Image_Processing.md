@@ -143,15 +143,16 @@ Taking the amount of data over the rate of transfer gives
 
 0.03318 Gb/5 Gbs = 6.64 ms. 
 
-The arithmetic processes for determining speed and other calculations to send to the launcher are considered to have O(1). This means the most limiting time
-factor is how long it takes to get two positions. 
+The arithmetic processes for determining acceleration, speed, and other calculations to send to the launcher are considered to have O(1). This means the
+most limiting time factor is how long it takes to get three positions. 
 
 
-33.33 ms + 6.64 ms + 79.2 ms + 33.33 ms + 6.64 ms + 79.2 ms = 238.34 ms. 
+33.33 ms + 6.64 ms + 79.2 ms + 33.33 ms + 6.64 ms + 79.2 ms + 33.33 ms + 6.64 ms + 79.2 ms = 357.42 ms. 
 
 This time period is well within the almost 1/8 time of the ball's travel given for the data to be collected and processed for the aiming and launching. It
 gives nearly 7/8 of the remaining time to determine the speed and location of the ball which will then be used to aim and intercept the ball. After the
-estimated 250 ms to calculate the speed and half a second each to aim and launch, 400 ms is left for the projectile to travel and intercept the golf ball.
+estimated 500 ms to process the image and calculate the speed and half a second each to aim and launch, 400 ms is left for the projectile to travel and
+intercept the golf ball before it hits the interceptor.
 
 **Bill of Materials:**
 
