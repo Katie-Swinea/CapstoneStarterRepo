@@ -4,7 +4,7 @@
 
 Figure 1: Extra subsystem and the pause switch can be seen in this figure.
 
-- The goal of this subsystem is to implement a pause switch, make sounds before firing, and lights. The system needs a pause switch to deactivate it between rounds. This is needed to allow the judges to reset the gameboard. When the system is in the pause state the array of Red LED's will be lit up and when the system is in the run state the array of Green LED's will be lit up. This will clearly indicate the launcher's current status. The launcher is active when the LED's are Green and inactive when the LED's are Red.
+- The goal of this subsystem is to implement a pause switch, make sounds before firing, and lights. The system needs a pause switch to deactivate it between rounds. This is needed to allow the judges to reset the gameboard. When the system is in the pause state the array of Red LED's will be lit up and when the system is in the run state the array of Green LED's will be lit up. This will clearly indicate the launcher's current status. The launcher is active when the LED's are Green and inactive when the LED's are Red. The buzzer will play a sound right before the launcher fires. All of the components will be implemented on a PCB.
 
 ## **Constraints:**
 
