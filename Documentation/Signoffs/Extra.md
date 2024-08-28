@@ -29,9 +29,11 @@ Figure 1: Extra subsystem and the pause switch can be seen in this figure.
 
 Figure 1: This represents the buildable schematic for the pause switch. This switch outputs 5V or ground that comes from the power subsystem. This output is sent to the processor block to determine the pause state. In this example, the green LED's will be at the top, and the red LED's will be at the bottom. 
 
+
 ![System](../Images/KiCad_PCB_Editor.png)
 
 Figure 2: This image shows the PCB Editor view of the PCB. 
+
 
 ![System](../Images/KiCad_3D_Viewer.png)
 
