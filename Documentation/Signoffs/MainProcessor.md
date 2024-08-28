@@ -83,7 +83,7 @@ When the switch gives a positive 5 Volts to the Jetson Nano, we need to stop scr
 
 **Arduino Integration**
 
-The Jetson Nano will integrate with the interceptor's Arduino controller aiming mechanism [7]. Through GPIO communication, the Jetson Nano commands the Arduino  to adjust the interceptor's position, aligning it with the golf ball's predicted path.
+The Jetson Nano will integrate with the interceptor's Arduino controller aiming mechanism [7]. The Jetson Nano will communicate with the Arduino using SPI interface. The pins: 'spi_ce0_n' (Enable), 'spi_clk' (Clock), 'spi_mosi' (Master Out Slave In), and 'spi_miso' (Master In Slave Out) the pins will handle data transmission from the Jetson Nano to the Arduino and vice versa. By connecting these pins, the Jetson Nano can act as an SPI master, sending location information and firing information while receiving data from the Arduino acting as a slave.
 
 Real-time trajectory data calculated by the Jetson Nano will then wait for the Arduino to send back a confirmation signal to confirm the position of the interceptor. This can apply to the X-Axis and Y-Axis of the system to be able to know if the interceptor controller aimed to the correct position [6].
 
