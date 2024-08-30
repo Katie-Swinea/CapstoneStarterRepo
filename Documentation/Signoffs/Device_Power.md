@@ -35,7 +35,7 @@ The system will be controlled by an on/off switch. This switch will allow the wa
 
 ## Buildable schematic 
 
-![Function](../Images/Device_Power/kicad20.png)
+![Function](../Images/Device_Power/Final_Drawing.png)
 
 *power subsystem buildable schematic*
 
@@ -112,7 +112,7 @@ To acomplish this power draw, the system will utilize the 5 volt 10 amp power su
 
 In order for the emergency stop to properly de-energize the entire mechanical system, one switch must be able to operate on three seperate circuits. The way this system will accomplish this is through the use of a 1-channel relay componet. This one channel relay takes a 5 volt input to charge the coil. It will power this coil using the 5 volt 10 amp supply that is powering the extra system and Jetson Nano[1]. 
 
-The single output of the 24 volt 25 amp power supply will be connected to the common input of the relay and there connected output will connect to the NC (normally closed) input. This will cause the 24 volt signal to output whenever the coil is not being connected to the 5 volt input. This is important as the emergency switch is supposed to shut power off when the switch is closed. Becuase of this when the emergency switch is closed the coil will begin charging causing the channel switch to close. This will output the NO (normally open) signal, which will not be connected to the motors. [4][5]
+The single output of the 24 volt 25 amp power supply will be connected to the common input of the relay and there connected output will connect to the NO (normally open) input. This will cause the 24 volt signal to output whenever the coil is connected to the 5 volt input. This means that whenever the emergancy stop is not being pressed, it will output the 5 Volt signal to the relay, closing the NO contact allowing the mechancial system to become powered. When the emergancy stop is pressed, it will disconnect the 5 Volt signal, causing the NO contact to disconnect, severing the power to the mechanical system. This is the safer of the options becuase if the emergancy stop is messed up and no power can get through, the mechanical system will stay off. [4][5]
 
 ### Total Power
 
