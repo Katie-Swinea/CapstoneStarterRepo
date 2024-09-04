@@ -47,7 +47,7 @@ As stated before the stepper motor drive given was picked by the ME team. This c
 *Processor Integration*
 The arduino will also be communicating with the processors Jetson Nano through the SPI pins. Pin D13 (SPI serial clock output) will be used as the clock between the two. Pin D12 (SPI Main In Secondary Out) will allow the processor to send data to the arduino as to which line the projectile is coming from. The arduino will then determine which of the 30 positions it is and initiate the position motors to move accordingly. Pin D11 (SPI1 Main Out Secondary In) after the position is in place a signal will be sent for a ready fire and then will load the ammunition into the barrel and fire. After this the mechanism will return to "zero position" or starting state and is ready for the next target. Pin D10 will be used as the Enable pin.
 
-![Elaboration Photo](../Images/Controllers/Arduino.png)
+![Elaboration Photo](../Images/Controllers/Arduino1.png)
 
 Figure 3[1]
 
