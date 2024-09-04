@@ -31,7 +31,7 @@ The goal of this subsystem is to activate the position motors and firing mechani
 
 ## **Buildable Schematics:**
 
-![Elaboration Photo](../Images/Controllers/Schematic3.png)
+![Elaboration Photo](../Images/Controllers/Schematic4.png)
 
 Figure 2: Buildable Schematic
 
