@@ -54,9 +54,9 @@ Figure 3[1]
 
 |Device|Description|Used in which subsystem|Part Number| Manufacturer|Quantity|Price|Total|
 |-------|---|---------|-------------|----|----|----|----|
-| Arduino UNO R3 |converts analog data to digital inputs to move motors|Interceptor Controller Subsystem|A000066| Arduino|3|$27.60|$82.80|
+| Arduino UNO R3 |converts analog data to digital inputs to move motors|Interceptor Controller Subsystem|A000066| Arduino|2|$27.60|$55.20|
 |TB6600 Stepper Motor Driver|Regulates current and keeps from going reverse bias, and divides rotation into equal steps|Interceptor Controller Subsystem & Mechanical Subsystem|TB6600|DFRobot|0||purchased by ME team|
-| | | | | | |Final Total|$82.80|
+| | | | | | |Final Total|$55.20|
 
 ## **References:**
 [1] Arduino, https://docs.arduino.cc/resources/pinouts/A000066-full-pinout.pdf (accessed Apr. 17, 2024). 
