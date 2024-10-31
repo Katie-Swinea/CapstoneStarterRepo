@@ -56,7 +56,7 @@ The voltage switched by the pause switch was measured over the course of five tr
 The following images show that both the green and red lights can be seen from 6.5' away. 
 
 #### Figure 1: Green LED's
-![Alt Text](Experimental_Analysis/Video_Photos/Green_lights.jpg)
+![Alt Text](Video_Photos/Green_lights.jpg)
 
 
 
