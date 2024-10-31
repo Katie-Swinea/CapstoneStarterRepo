@@ -39,9 +39,9 @@ The firing motors that control the wheels which create the speed of the projecti
 
 #### Results
 
-#### 1 
+#### 1 - Pause Switch
 
-#### 2 
+#### 2 - Pause Switch Voltage
 The voltage switched by the pause switch was measured over the course of five trials. All trial results are shown below. As can be seen the voltage switched by the pause switch is approximately 5V.
 
 | NO. | Result |
@@ -52,7 +52,7 @@ The voltage switched by the pause switch was measured over the course of five tr
 | 4. | 5.05V |
 | 5. | 5.05V |
 
-#### 3
+#### 3 - Lights
 The following images show that both the green and red lights can be seen from 6.5' away. 
 
 #### Figure 1: Green LED's
@@ -61,7 +61,7 @@ The following images show that both the green and red lights can be seen from 6.
 #### Figure 2: Red LED's
 ![Alt Text](Video_Photos/Red_Lights.jpeg)
 
-#### 4
+#### 4 - Sounds
 The interceptor does make sounds before firing. The sound is a frequency that humans can hear and it can be heard above the noise of the room and interceptor itself. 
 
 ### Image Processing
