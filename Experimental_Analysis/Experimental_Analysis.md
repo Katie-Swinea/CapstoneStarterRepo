@@ -93,7 +93,27 @@ The interceptor does make sounds before firing. The sound is a frequency that hu
 |6|Must change position before incoming object enters the "kill zone"|
 
 #### Results
+#### 1 - 1-30 Pre-Set Locations
 
+#### 2 - Processor Communication
+
+#### 3 - 5V from Processor
+
+This constraint was not met as written. The 5V is supplied from the device power and not the procesor. This was changed to prevent over currenting the processor. Five trials are shown below to prove that the device power is supplying 5V to the interceptor controller. 
+
+| Trial | Voltage |
+|-------|---------|
+| 1 | 5.0310 |
+| 2 | 5.0298 |
+| 3 | 5.0253 |
+| 4 | 5.0290 | 
+| 5 | 5.0320 |
+
+#### 4 - Direction Change
+
+#### 5 - Safe Firing Speed/ Distance
+
+#### 6 - Kill Zone
 
 ### Main Processor
 
