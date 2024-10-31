@@ -42,7 +42,8 @@ The firing motors that control the wheels which create the speed of the projecti
 #### 1 
 
 #### 2 
-The voltage switched by the pause switch was measured over the course of five trials. All trial results are shown below. 
+The voltage switched by the pause switch was measured over the course of five trials. All trial results are shown below. As can be seen the voltage switched by the pause switch is approximately 5V.
+
 | NO. | Result |
 |-----|---------------------------------------------------------------------|
 | 1. | 5.05V |
@@ -51,6 +52,11 @@ The voltage switched by the pause switch was measured over the course of five tr
 | 4. | 5.05V |
 | 5. | 5.05V |
 
+#### 3
+The following images show that both the green and red lights can be seen from 6.5' away. 
+
+#### Figure 1: Green LED's
+![Alt Text](../Images/Experimental%20Analysis%20Photos/Green_lights.jpg)
 
 
 
