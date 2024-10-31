@@ -39,7 +39,17 @@ The firing motors that control the wheels which create the speed of the projecti
 
 #### Results
 
+#### 1 
 
+#### 2 
+The voltage switched by the pause switch was measured over the course of five trials. All trial results are shown below. 
+| NO. | Result |
+|-----|---------------------------------------------------------------------|
+| 1. | 5.05V |
+| 2. | 5.05V |
+| 3. | 5.05V |
+| 4. | 5.05V |
+| 5. | 5.05V |
 
 
 
