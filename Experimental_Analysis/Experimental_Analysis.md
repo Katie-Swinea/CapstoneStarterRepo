@@ -20,8 +20,22 @@ Each subsystem will be divided into it's own section to make it easy to follow.
 
 #### 1 - Emergency Stop:
 
-The system must have an emergency stop button that will completly de-energize the mechanical system. This means the processor and lights will remain on, while the motors and solenoid that make up the mechanical system will be completely off. There are two types of mechanical componets in this system that each require a differnt test to measure the efectiveness of the emergency stop.
-The firing motors that control the wheels which create the speed of the projectile were tested by measuring the output voltage with the emergency stop being on and off. The solenoid 
+#### 4 – Power Switch 
+
+The system must have a functioning power switch that turns the system on/off. For this system there are two switches. One that controls the mechanical system and one that controls the processor and light system. To test this, both switches were turned off and then on again to see if both successfully turn off and then on again. The results are listed below. 
+
+| Trail Number | Mechanical Off | Mechanical On | Processor Off | Processor On |  
+|-----------------|---------------------|--------------------|-------------------|------------------| 
+| 1 | Yes | Yes | Yes | Yes | 
+| 2 | Yes | Yes | Yes | Yes | 
+| 3 | Yes | Yes | Yes | Yes |  
+| 4 | Yes | Yes | Yes | Yes | 
+| 5 | Yes | Yes | Yes | Yes | 
+| 6 | Yes | Yes | Yes | Yes |  
+| 7 | Yes | Yes | Yes | Yes |  
+| 8 | Yes | Yes | Yes | Yes | 
+| 9 | Yes | Yes | Yes | Yes | 
+| 10 | Yes | Yes | Yes | Yes | 
 
 
 
