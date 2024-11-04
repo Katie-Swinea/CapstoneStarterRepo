@@ -54,9 +54,19 @@ The system must have a functioning power switch that turns the system on/off. Fo
 #### Results
 
 #### 1 - Pause Switch
+![Alt Text](Video_Photos/Green_Switch.jpeg)
+The image above shows the interceptor in the run state. Note the pause switch is to the right.
+ 
+ 
+![Alt Text](Video_Photos/Red_Switch.jpeg)
+The image above shows the interceptor in the run state. Note the pause switch is to the left. 
+ 
+ 
+![Alt Text](Video_Photos/PausedScript.jpeg)
+The image above shows the running script and the outputs of the Jetson Nano in the terminal. When the Jetson prompts the interceptor to fire it can be seen that the script reads "Fire!". This shows that the interceptor can fire when the pause switch is off. When the pause switch is on and the interceptor is prompted to fire, the "Paused!" text can be seen and the interceptor does not fire. This shows that the interceptor is in the pause state. 
 
 #### 2 - Pause Switch Voltage
-The voltage switched by the pause switch was measured over the course of five trials. All trial results are shown below. As can be seen the voltage switched by the pause switch is approximately 5V.
+The voltage switched by the pause switch was measured over the course of ten trials. All trial results are shown below. As can be seen the voltage switched by the pause switch is approximately 5V. 
 
 | NO. | Result |
 |-----|---------------------------------------------------------------------|
@@ -65,6 +75,11 @@ The voltage switched by the pause switch was measured over the course of five tr
 | 3. | 5.05V |
 | 4. | 5.05V |
 | 5. | 5.05V |
+| 6. | 5.05V |
+| 7. | 5.05V |
+| 8. | 5.05V |
+| 9. | 5.05V |
+| 10. | 5.05V |
 
 #### 3 - Lights
 The following images show that both the green and red lights can be seen from 6.5' away. 
