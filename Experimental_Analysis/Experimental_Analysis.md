@@ -88,10 +88,41 @@ The interceptor does make sounds before firing. The sound is a frequency that hu
 
 #### Results
 
+#### 1 - Golf Ball from Surroundings
 
+#### 2 - x, y Coordinates of the Golf Ball
 
+The depth camera has a FOV of about 86 by 57 degrees. The x and y coordinates are distinguishable as seen in the above experiment. At the same distance on line 7 and 8, the two balls are at 200 and 110 for 7 and 222 and 110 for 8. This gives a 22 pixel difference on the x coordinates. The FOV is 2 * tan (86/2) * distance. Distances is 75 inches in this case. Thus the FOV width in inches is 139.88. Each pixel per inch at this distance is 0.109. A 22 pixel distance means the lines are 2.40 inches apart. The measured distance between the lines is 3.25 inches. Thus the error is 0.85 inches and within the 1 inch error. This same process was done for multiple lines at multiple distances. 
 
+| First Line | Second Line | Distance | Postion Error |
+|------------|-------------|----------|---------------|
+| 7 | 8 | 75 inches | 0.85 inches |
+| 10 | 11 | 70 inches | 0.96 inches |
+| 4 | 5 | 55 inches | 0.50 inches |
+| 14 | 15 | 50 inches | 0.75 inches |
+| 1 | 2 | 45 inches | 0.28 inches |
+| 12 | 13 | 40 inches | 0.92 inches |
+| 5 | 6 | 30 inches | 0.88 inches |
 
+This shows that for many different positions the error does not get above an inch. While the changes in distance can vary due to the angle of the camera and the position that wire would be at on the camera, the accuracy of the position is still within an inch of the actual position. 
+
+#### 3 - Perform Calculations in 500 ms
+
+The ball will be able to be measured and calculated within 500 ms. It can be seen that several frames are received, detect the ball, and make calculations for interception. 
+
+| Processing Time | Transfer Time | Additional Calculations | Total Time |
+|-----------------|---------------|-------------------------|------------|
+| 21.01 ms | 17.75 ms | 0.102 ms | 38.86 ms |
+| 16.70 ms | 17.75 ms | 0.108 ms | 34.56 ms |
+| 22.21 ms | 17.75 ms | 0.126 ms | 40.09 ms |
+| 17.22 ms | 17.75 ms | 0.124 ms | 35.09 ms |
+| 18.33 ms | 17.75 ms | 0.107 ms | 36.19 ms |
+| 14.65 ms | 17.75 ms | 0.104 ms | 32.50 ms |
+| 20.95 ms | 17.75 ms | 0.123 ms | 38.82 ms |
+| 22.49 ms | 17.75 ms | 0.106 ms | 40.35 ms |
+| 15.38 ms | 17.75 ms | 0.121 ms | 33.25 ms |
+
+From the above values, it can be seen that the total processing time for a single frame is much lower than expected. Taking the worse frame time, 40.35 ms, and multiplying it by 3 to get the amount of frames needed for velocity and acceleration calculations gives a total time of 121.05 ms. This allows for error checking to add an additional three frames to determine any false detections and then do the calculations. This would give a total time of 242.10 ms. This is well within the 500 ms limit that was given. This also allows for the time of one second from the release of the ball to the ‘kill-zone’ to be achievable. The time for positioning and firing the interceptor is about 500 ms giving a total interception time of 742.10 ms. It is important to note the kill zone is 21 inches from the tip of the gun, allowing time for the projectile to fire and make contact with the golf ball. 
 
 ### Interceptor Controller
 
