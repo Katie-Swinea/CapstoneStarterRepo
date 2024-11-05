@@ -37,6 +37,24 @@ To prove this constraint, the emergency stop was turned on and turned off 10 tim
 | 9 | Off | On |
 | 10 | Off | On |
 
+The below photos show how the emergency stop works and depicts that it is functioning correctly. 
+
+![Alt Text](Video_Photos/E_Stop_UP2.jpg)
+
+*E-Stop not pressed*
+
+![Alt Text](Video_Photos/E_Stop_UP1.jpg)
+
+*E-Stop not pressed so system on*
+
+![Alt Text](Video_Photos/E_Stop_Down2.jpg)
+
+*E-Stop pressed*
+
+![Alt Text](Video_Photos/E_Stop_Down1.jpg)
+
+*E-Stop pressed so system off*
+
 #### 4 – Power Switch 
 
 The system must have a functioning power switch that turns the system on/off. For this system there are two switches. One that controls the mechanical system and one that controls the processor and light system. To test this, both switches were turned off and then on again to see if both successfully turn off and then on again. The results are listed below. 
@@ -54,8 +72,15 @@ The system must have a functioning power switch that turns the system on/off. Fo
 | 9 | Yes | Yes | Yes | Yes | 
 | 10 | Yes | Yes | Yes | Yes | 
 
+The below photos show the power switches functioning correctly. 
 
+![Alt Text](Video_Photos/Power_ON.jpg)
 
+*Switch on so system is on*
+
+![Alt Text](Video_Photos/Power_Off.jpg)
+
+*Switch off so system is off*
 
 
 ### Extra
