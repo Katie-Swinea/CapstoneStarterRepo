@@ -121,7 +121,7 @@ The following images show that both the green and red lights can be seen from 6.
 ![Alt Text](Video_Photos/Red_Lights.jpeg)
 
 #### 4 - Sounds
-The interceptor does make sounds before firing. The sound is a frequency that humans can hear and it can be heard above the noise of the room and interceptor itself. 
+The interceptor does make sounds before firing. The sound is a frequency that humans can hear and it can be heard above the noise of the room and interceptor itself. The buzzer can be heard at the following YouTube link. [Link](https://youtube.com/shorts/tiVD-2daVd4)
 
 ### Image Processing
 #### Constraints
