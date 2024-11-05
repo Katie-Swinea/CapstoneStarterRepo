@@ -220,6 +220,7 @@ This constraint was not met as written. The 5V is supplied from the device power
 #### 1
 #### 2
 #### 3
+![Alt Text](Video_Photos/jetson_nano_stats.png)
 #### 4
 The pause switch data is referenced in the extra subsystem. It properly keeps the processor from activating the firing mechanisms as mentioned. 
 
