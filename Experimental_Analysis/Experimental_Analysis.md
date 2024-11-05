@@ -137,9 +137,9 @@ The interceptor does make sounds before firing. The sound is a frequency that hu
 
 The golf ball was able to be distinguished from the surroundings as seen in the picture below of the where the golf ball is and how it was detected: 
 
-![Alt Text](Video_Photos/Actual_View.jpeg)
+![Alt Text](Video_Photos/Actual_View.jpg)
 
-![Alt Text](Video_Photos/Camera_View.jpeg)
+![Alt Text](Video_Photos/Camera_View.jpg)
 
 This shows that only the golf ball is fully detected with coordinates and a distance on the shape that was found. It uses the golf ball’s characteristics like size and shape to distinguish the ball. This was done at several different positions on each wire of the game board. 
 
