@@ -200,7 +200,11 @@ This constraint was not met as written. The 5V is supplied from the device power
 | 4 | Pausing Processes: The system needs a pause state to stop other scripts from activating firing mechanisms. |
 
 #### Results
-
+#### 1
+#### 2
+#### 3
+#### 4
+The pause switch data is referenced in the extra subsystem. It properly keeps the processor from activating the firing mechanisms as mentioned. 
 
 
 ### Sensor Subsystem
