@@ -63,7 +63,20 @@ The image above shows the interceptor in the run state. Note the pause switch is
  
  
 ![Alt Text](Video_Photos/PausedScript.jpeg)
-The image above shows the running script and the outputs of the Jetson Nano in the terminal. When the Jetson prompts the interceptor to fire it can be seen that the script reads "Fire!". This shows that the interceptor can fire when the pause switch is off. When the pause switch is on and the interceptor is prompted to fire, the "Paused!" text can be seen and the interceptor does not fire. This shows that the interceptor is in the pause state. 
+The image above shows the running script and the outputs of the Jetson Nano in the terminal. When the Jetson prompts the interceptor to fire it can be seen that the script reads "Fire!". This shows that the interceptor can fire when the pause switch is off. When the pause switch is on and the interceptor is prompted to fire, the "Paused!" text can be seen and the interceptor does not fire. This shows that the interceptor is in the pause state. The following table shows the trials tested.
+
+| NO. | Pause | Fire |
+|-----|------|-----|
+| 1. | Yes | No |
+| 2. | No | Yes |
+| 3. | Yes | No |
+| 4. | No | Yes |
+| 5. | No | Yes |
+| 6. | Yes | No |
+| 7. | No | Yes |
+| 8. | Yes | Yes |
+| 9. | Yes | Yes |
+| 10. | No | Yes |
 
 #### 2 - Pause Switch Voltage
 The voltage switched by the pause switch was measured over the course of ten trials. All trial results are shown below. As can be seen the voltage switched by the pause switch is approximately 5V. 
