@@ -20,6 +20,23 @@ Each subsystem will be divided into it's own section to make it easy to follow.
 
 #### 1 - Emergency Stop:
 
+The system must have an emergency stop button that will completely de-energize the mechanical system. This means the processor and lights will remain on, while the motors and solenoid that make up the mechanical system will be completely off. 
+
+To prove this constraint, the emergency stop was turned on and turned off 10 times. The results are listed below. 
+
+| Trail Number | Mechanical System with E-Stop Pressed | Mechanical System with E-Stop Not Pressed |
+|--------------|---------------------------------------|-------------------------------------------|
+| 1 | Off | On |
+| 2 | Off | On |
+| 3 | Off | On |
+| 4 | Off | On | 
+| 5 | Off | On |
+| 6 | Off | On |
+| 7 | Off | On |
+| 8 | Off | On |
+| 9 | Off | On |
+| 10 | Off | On |
+
 #### 4 – Power Switch 
 
 The system must have a functioning power switch that turns the system on/off. For this system there are two switches. One that controls the mechanical system and one that controls the processor and light system. To test this, both switches were turned off and then on again to see if both successfully turn off and then on again. The results are listed below. 
