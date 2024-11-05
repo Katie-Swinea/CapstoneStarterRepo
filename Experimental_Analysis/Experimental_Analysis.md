@@ -146,6 +146,7 @@ This shows that only the golf ball is fully detected with coordinates and a dist
 The golf ball was placed at each of the 15 lines and then it was recorded if the ball was visible to the camera. The results are listed below. 
 
 | Line Number | Was Detected by Camera |
+|-------------|------------------------|
 | 1 | Yes |
 | 2 | Yes |
 | 3 | Yes |
