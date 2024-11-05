@@ -135,6 +135,34 @@ The interceptor does make sounds before firing. The sound is a frequency that hu
 
 #### 1 - Golf Ball from Surroundings
 
+The golf ball was able to be distinguished from the surroundings as seen in the picture below of the where the golf ball is and how it was detected: 
+
+![Alt Text](Video_Photos/Actual_View.jpeg)
+
+![Alt Text](Video_Photos/Camera_View.jpeg)
+
+This shows that only the golf ball is fully detected with coordinates and a distance on the shape that was found. It uses the golf ball’s characteristics like size and shape to distinguish the ball. This was done at several different positions on each wire of the game board. 
+
+The golf ball was placed at each of the 15 lines and then it was recorded if the ball was visible to the camera. The results are listed below. 
+
+| Line Number | Was Detected by Camera |
+| 1 | Yes |
+| 2 | Yes |
+| 3 | Yes |
+| 4 | Yes |
+| 5 | Yes |
+| 6 | Yes |
+| 7 | Yes |
+| 8 | Yes |
+| 9 | Yes |
+| 10 | Yes |
+| 11 | Yes |
+| 12 | Yes |
+| 13 | Yes |
+| 14 | Yes |
+| 15 | Yes |
+
+
 #### 2 - x, y Coordinates of the Golf Ball
 
 The depth camera has a FOV of about 86 by 57 degrees. The x and y coordinates are distinguishable as seen in the above experiment. At the same distance on line 7 and 8, the two balls are at 200 and 110 for 7 and 222 and 110 for 8. This gives a 22 pixel difference on the x coordinates. The FOV is 2 * tan (86/2) * distance. Distances is 75 inches in this case. Thus the FOV width in inches is 139.88. Each pixel per inch at this distance is 0.109. A 22 pixel distance means the lines are 2.40 inches apart. The measured distance between the lines is 3.25 inches. Thus the error is 0.85 inches and within the 1 inch error. This same process was done for multiple lines at multiple distances. 
