@@ -55,6 +55,38 @@ The below photos show how the emergency stop works and depicts that it is functi
 
 *E-Stop pressed so system off*
 
+#### 2 - 24 Volt, 20 Amp Supply
+
+This system needed to convert AC, wall outlet power to 24 volts and a maximum of 20 amps. To meet this constraint, the system is using a 24-volt 25-amp power supply. Because the supply itself was not altered or changed, the product listing specifications will suffice in proving this constraint has been met. The specs are shown below. 
+
+![Alt Text](Video_Photos/24_1.png)
+
+*24-volt 25-amp supply listing 1*
+
+![Alt Text](Video_Photos/24_2.png)
+
+*24-volt 25-amp supply listing 2*
+
+![Alt Text](Video_Photos/24_3.png)
+
+*24-volt 25-amp supply listing 3*
+
+#### 3 - 5 Volt, 10 Amp Supply
+
+This system needed to convert AC, wall outlet power to 5 volts and a maximum of 5 amps. To meet this constraint, the system is using a 5-volt 10-amp power supply. Because the supply itself was not altered or changed, the product listing specifications will suffice in proving this constraint has been met. The specs are shown below. 
+
+![Alt Text](Video_Photos/5_1.png)
+
+*5-volt 10-amp supply listing 1*
+
+ ![Alt Text](Video_Photos/5_2.png)
+
+*5-volt 10-amp supply listing 2*
+
+![Alt Text](Video_Photos/5_3.png)
+
+*5-volt 10-amp supply listing 3*
+
 #### 4 – Power Switch 
 
 The system must have a functioning power switch that turns the system on/off. For this system there are two switches. One that controls the mechanical system and one that controls the processor and light system. To test this, both switches were turned off and then on again to see if both successfully turn off and then on again. The results are listed below. 
