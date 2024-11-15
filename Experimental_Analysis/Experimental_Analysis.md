@@ -270,8 +270,27 @@ From the above values, it can be seen that the total processing time for a singl
 
 #### Results
 #### 1 - 1-30 Pre-Set Locations
+For minimal functional prototype we only have 15 of the 30 set positions at this time.
+|Line|Height| Movement|
+|----|---|-----|
+|1|2||
+|2|2||
+|3|2||
+|4|2||
+|5|2||
+|6|2||
+|7|2||
+|8|2||
+|9|2||
+|10|2||
+|11|2||
+|12|2||
+|13|2||
+|14|2||
+|15|2||
 
 #### 2 - Processor Communication
+
 
 #### 3 - 5V from Processor
 
