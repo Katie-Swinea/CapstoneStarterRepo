@@ -272,7 +272,7 @@ From the above values, it can be seen that the total processing time for a singl
 #### 1 - 1-30 Pre-Set Locations
 For minimal functional prototype we only have 15 of the 30 set positions at this time.
 |Line|Height| Movement|
-|----|---|-----|
+|---|--|-----|
 |1|2||
 |2|2||
 |3|2||
@@ -290,7 +290,14 @@ For minimal functional prototype we only have 15 of the 30 set positions at this
 |15|2||
 
 #### 2 - Processor Communication
-
+Communication Test
+|Trial|Signal Received|
+|---|----|
+|1|Yes|
+|2|Yes|
+|3|Yes|
+|4|Yes|
+|5|Yes|
 
 #### 3 - 5V from Processor
 
@@ -305,10 +312,17 @@ This constraint was not met as written. The 5V is supplied from the device power
 | 5 | 5.0320 |
 
 #### 4 - Direction Change
-
+|Trial|Direction Changed|
+|---|----|
+|1|Yes|
+|2|Yes|
+|3|Yes|
+|4|Yes|
+|5|Yes|
 #### 5 - Safe Firing Speed/ Distance
 
 #### 6 - Kill Zone
+
 
 ### Main Processor
 
