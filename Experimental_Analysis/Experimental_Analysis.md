@@ -164,7 +164,7 @@ The golf ball was able to be distinguished from the surroundings as seen in the 
 
 ![Alt Text](Video_Photos/Camera_View.jpg)
 
-This shows that only the golf ball is fully detected with coordinates and a distance on the shape that was found. It uses the golf ball’s characteristics like size and shape to distinguish the ball. This was done at several different positions on each wire of the game board. 
+This shows that only the golf ball is fully detected with coordinates and a distance on the shape that was found. It uses the golf ball’s characteristics like size and shape to distinguish the ball. This was done at several different positions on each wire of the game board. However, false detections from the light above the gameboard are prominent. While a ball is on the gameboard, it is determined to be the real ball, and its coordinates are extracted as seen in the picture above. However, to obtain a better product, it would be ideal to reduce the noise in any conditions. Current ideas are being explored to remedy this further, but the ball is still able to be distinguished and intercepted when present.
 
 The golf ball was placed at each of the 15 lines and then it was recorded if the ball was visible to the camera. The results are listed below. 
 
