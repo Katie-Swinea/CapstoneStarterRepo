@@ -236,26 +236,44 @@ From the above values, it can be seen that the total processing time for a singl
 For minimal functional prototype we only have 15 of the 30 set positions at this time.
 |Line|Height| Movement|
 |---|--|-----|
-|1|2||
-|2|2||
-|3|2||
-|4|2||
-|5|2||
-|6|2||
-|7|2||
-|8|2||
-|9|2||
-|10|2||
-|11|2||
-|12|2||
-|13|2||
-|14|2||
-|15|2||
+|1|2|Yes|
+|2|2|Yes|
+|3|2|Yes|
+|4|2|Yes|
+|5|2|Yes|
+|6|2|Yes|
+|7|2|Yes|
+|8|2|Yes|
+|9|2|Yes|
+|10|2|Yes|
+|11|2|Yes|
+|12|2|Yes|
+|13|2|Yes|
+|14|2|Yes|
+|15|2|Yes|
 
 
 #### 5 - Safe Firing Speed/ Distance
 
 #### 6 - Kill Zone
+The firing mechanism must change its position before the golf ball enters the kill zone. Like the Pre-Set location Constraint we only have 15 out of the 30 set positions.
+| Line #'s kill zone | Movement |
+|------|----|
+|1|Yes|
+|2|Yes|
+|3|Yes|
+|4|Yes|
+|5|Yes|
+|6|Yes|
+|7|Yes|
+|8|Yes|
+|9|Yes|
+|10|Yes|
+|11|Yes|
+|12|Yes|
+|13|Yes|
+|14|Yes|
+|15|Yes|
 
 
 ### Sensor Subsystem
