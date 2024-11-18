@@ -12,8 +12,6 @@ Each subsystem will be divided into it's own section to make it easy to follow.
 | NO. | Constraint                                                          |
 |-----|---------------------------------------------------------------------|
 | 1   | The power system shall be controlled by an emergency stop which will de-energize the mechanical system. This will shut off the motors which will not allow any projectiles to be fired. This will only be used if the system threatens peoples safety 
-| 2   | The system shall convert wall outlet AC voltage to up to 24 volts at up to 20 amps for the mechanical system. This includes two DC motor controllers which requires 9-48 volts at 5 amps and the DC motor which will receieve anywhere from 12-24 volts at 10 amps |
-| 3   | The system shall convert wall outlet AC voltage to up to 5 volts at up to 5 amps for the proccesor system, which requires 5 volts at 4 amps, relay coil which requires 5 volts as a high impendence input and the extra subsystem which requires 5 volts at 0.8 amps. |
 | 4   | The system shall be controlled by a power switch                 |
 
 #### Results
@@ -54,38 +52,6 @@ The below photos show how the emergency stop works and depicts that it is functi
 ![Alt Text](Video_Photos/E_Stop_Down1.jpg)
 
 *E-Stop pressed so system off*
-
-#### 2 - 24 Volt, 20 Amp Supply
-
-This system needed to convert AC, wall outlet power to 24 volts and a maximum of 20 amps. To meet this constraint, the system is using a 24-volt 25-amp power supply. Because the supply itself was not altered or changed, the product listing specifications will suffice in proving this constraint has been met. The specs are shown below. 
-
-![Alt Text](Video_Photos/24_1.png)
-
-*24-volt 25-amp supply listing 1*
-
-![Alt Text](Video_Photos/24_2.png)
-
-*24-volt 25-amp supply listing 2*
-
-![Alt Text](Video_Photos/24_3.png)
-
-*24-volt 25-amp supply listing 3*
-
-#### 3 - 5 Volt, 10 Amp Supply
-
-This system needed to convert AC, wall outlet power to 5 volts and a maximum of 5 amps. To meet this constraint, the system is using a 5-volt 10-amp power supply. Because the supply itself was not altered or changed, the product listing specifications will suffice in proving this constraint has been met. The specs are shown below. 
-
-![Alt Text](Video_Photos/5_1.png)
-
-*5-volt 10-amp supply listing 1*
-
- ![Alt Text](Video_Photos/5_2.png)
-
-*5-volt 10-amp supply listing 2*
-
-![Alt Text](Video_Photos/5_3.png)
-
-*5-volt 10-amp supply listing 3*
 
 #### 4 – Power Switch 
 
