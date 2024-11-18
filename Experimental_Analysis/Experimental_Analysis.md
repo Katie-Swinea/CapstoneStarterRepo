@@ -228,9 +228,6 @@ From the above values, it can be seen that the total processing time for a singl
 | NO. | Constraint                                                          |
 |-----|---------------------------------------------------------------------|
 |1|The Interceptor Controller shall move firing mechanism to 1 of 30 pre set locations |
-|2|Must communicate with processor|
-|3|Shall receive 5V power supply from processor|
-|4|Must change direction of the motors in the Mechanical's section |
 |5|Must maintain safe firing speed and distance|
 |6|Must change position before incoming object enters the "kill zone"|
 
@@ -255,59 +252,10 @@ For minimal functional prototype we only have 15 of the 30 set positions at this
 |14|2||
 |15|2||
 
-#### 2 - Processor Communication
-Communication Test
-|Trial|Signal Received|
-|---|----|
-|1|Yes|
-|2|Yes|
-|3|Yes|
-|4|Yes|
-|5|Yes|
 
-#### 3 - 5V from Processor
-
-This constraint was not met as written. The 5V is supplied from the device power and not the procesor. This was changed to prevent over currenting the processor. Five trials are shown below to prove that the device power is supplying 5V to the interceptor controller. 
-
-| Trial | Voltage |
-|-------|---------|
-| 1 | 5.0310 |
-| 2 | 5.0298 |
-| 3 | 5.0253 |
-| 4 | 5.0290 | 
-| 5 | 5.0320 |
-
-#### 4 - Direction Change
-|Trial|Direction Changed|
-|---|----|
-|1|Yes|
-|2|Yes|
-|3|Yes|
-|4|Yes|
-|5|Yes|
 #### 5 - Safe Firing Speed/ Distance
 
 #### 6 - Kill Zone
-
-
-### Main Processor
-
-#### Constraints
-
-| NO. | Constraint                                                          |
-|-----|---------------------------------------------------------------------|
-| 1	| Time Constraints - Real-time data processing for trajectory prediction for the golf ball can not take longer than the total time for each image. The main processor needs to calculate the ball data before the ball reaches the end which varies from 1.9 seconds to 7.4 seconds |
-| 2	| Processing Speed - The main processor scripts and programs have to be optimized for efficient calculations. The scripts get the speed, wire, and variable height from input data. These calculations should not take longer than their required time per calculation iteration |
-| 3	| Resource Utilization - Since the board has 1.43GHz with quad-cores and 4GB RAM, the main processor needs to be utilized properly to prevent an overload of system resources. The system needs to use all cores and not overload the RAM for speed efficiency but not sacrifice stability |
-| 4 | Pausing Processes: The system needs a pause state to stop other scripts from activating firing mechanisms. |
-
-#### Results
-#### 1
-#### 2
-#### 3
-![Alt Text](Video_Photos/jetson_nano_stats.png)
-#### 4
-The pause switch data is referenced in the extra subsystem. It properly keeps the processor from activating the firing mechanisms as mentioned. 
 
 
 ### Sensor Subsystem
@@ -316,9 +264,7 @@ The pause switch data is referenced in the extra subsystem. It properly keeps th
 
 | NO. | Constraint                                                          |
 |-----|---------------------------------------------------------------------|
-| 1   | The sensor shall be supplied 5 V via USB from the Jetson Nano processor   |
 | 2   | The sensor shall be able to retrieve at least 2 data points within 0.0667s in order to calculate speed which allows for maximum time for calculations given the constraints of the image processing system  |
-| 3   | The sensor shall have a resolution no larger than 1920 X 1080 due to constraints from the image processing system                                                                                           |
 | 4   | The sensor shall be able to gather depth data from at most 6' and at least 1' away which is the length of the gameboard                                                                                     |
 | 5   | The sensor shall have a FOV that is wider than 56" from 6' away which is the width of anchor 2 and the length of the gameboard                                                                              |
 
