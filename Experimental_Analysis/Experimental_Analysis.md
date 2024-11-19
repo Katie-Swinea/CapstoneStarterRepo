@@ -114,8 +114,8 @@ The image above shows the running script and the outputs of the Jetson Nano in t
 | 5. | No | Yes |
 | 6. | Yes | No |
 | 7. | No | Yes |
-| 8. | Yes | Yes |
-| 9. | Yes | Yes |
+| 8. | Yes | No |
+| 9. | Yes | No |
 | 10. | No | Yes |
 
 #### 2 - Pause Switch Voltage
