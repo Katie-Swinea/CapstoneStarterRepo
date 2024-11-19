@@ -12,7 +12,7 @@ Each subsystem will be divided into it's own section to make it easy to follow.
 | NO. | Constraint                                                          |
 |-----|---------------------------------------------------------------------|
 | 1   | The power system shall be controlled by an emergency stop which will de-energize the mechanical system. This will shut off the motors which will not allow any projectiles to be fired. This will only be used if the system threatens peoples safety 
-| 4   | The system shall be controlled by a power switch                 |
+| 2   | The system shall be controlled by a power switch                 |
 
 #### Results
 
@@ -53,7 +53,7 @@ The below photos show how the emergency stop works and depicts that it is functi
 
 *E-Stop pressed so system off*
 
-#### 4 – Power Switch 
+#### 2 – Power Switch 
 
 The system must have a functioning power switch that turns the system on/off. For this system there are two switches. One that controls the mechanical system and one that controls the processor and light system. To test this, both switches were turned off and then on again to see if both successfully turn off and then on again. The results are listed below. 
 
@@ -228,8 +228,8 @@ From the above values, it can be seen that the total processing time for a singl
 | NO. | Constraint                                                          |
 |-----|---------------------------------------------------------------------|
 |1|The Interceptor Controller shall move firing mechanism to 1 of 30 pre set locations |
-|5|Must maintain safe firing speed and distance|
-|6|Must change position before incoming object enters the "kill zone"|
+|2|Must maintain safe firing speed and distance|
+|3|Must change position before incoming object enters the "kill zone"|
 
 #### Results
 #### 1 - 1-30 Pre-Set Locations
@@ -253,9 +253,9 @@ For minimal functional prototype we only have 15 of the 30 set positions at this
 |15|2|Yes|
 
 
-#### 5 - Safe Firing Speed/ Distance
+#### 2 - Safe Firing Speed/ Distance
 
-#### 6 - Kill Zone
+#### 3 - Kill Zone
 The firing mechanism must change its position before the golf ball enters the kill zone. Like the Pre-Set location Constraint we only have 15 out of the 30 set positions.
 | Line #'s kill zone | Movement |
 |------|----|
@@ -282,9 +282,9 @@ The firing mechanism must change its position before the golf ball enters the ki
 
 | NO. | Constraint                                                          |
 |-----|---------------------------------------------------------------------|
-| 2   | The sensor shall be able to retrieve at least 2 data points within 0.0667s in order to calculate speed which allows for maximum time for calculations given the constraints of the image processing system  |
-| 4   | The sensor shall be able to gather depth data from at most 6' and at least 1' away which is the length of the gameboard                                                                                     |
-| 5   | The sensor shall have a FOV that is wider than 56" from 6' away which is the width of anchor 2 and the length of the gameboard                                                                              |
+| 1   | The sensor shall be able to retrieve at least 2 data points within 0.0667s in order to calculate speed which allows for maximum time for calculations given the constraints of the image processing system  |
+| 2   | The sensor shall be able to gather depth data from at most 6' and at least 1' away which is the length of the gameboard                                                                                     |
+| 3   | The sensor shall have a FOV that is wider than 56" from 6' away which is the width of anchor 2 and the length of the gameboard                                                                              |
 
 #### Results
 
