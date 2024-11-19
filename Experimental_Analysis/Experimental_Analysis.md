@@ -1,7 +1,7 @@
 # Experimental Analysis
 
 ## Introduction 
-The purpose of this report is to verify the requirements and constraints set for each subsystem and explain the prodecures and experiments used to validate them. The constraints for each subsystem were set and finialzed during the detail design phase of our senior design project. 
+The purpose of this report is to verify the requirements and constraints that impact the full functionality of the system and explain the prodecures and experiments used to validate them. The constraints for each subsystem were set and finialzed during the detail design phase of our senior design project. 
 
 ## Experimentation
 Each subsystem will be divided into it's own section to make it easy to follow.
