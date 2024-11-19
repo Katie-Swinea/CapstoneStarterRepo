@@ -282,10 +282,24 @@ The firing mechanism must change its position before the golf ball enters the ki
 
 | NO. | Constraint                                                          |
 |-----|---------------------------------------------------------------------|
-| 1   | The sensor shall be able to retrieve at least 2 data points within 0.0667s in order to calculate speed which allows for maximum time for calculations given the constraints of the image processing system  |
+| 1   | The sensor shall be able to retrieve at least 3 data points within 0.0667s in order to calculate speed which allows for maximum time for calculations given the constraints of the image processing system  |
 | 2   | The sensor shall be able to gather depth data from at most 6' and at least 1' away which is the length of the gameboard                                                                                     |
 | 3   | The sensor shall have a FOV that is wider than 56" from 6' away which is the width of anchor 2 and the length of the gameboard                                                                              |
 
 #### Results
 
+#### 1 - Data Points
+We are only using the depth camera portion of the Intel D435 camera which has a frame rate of 90 frames per second. At that speed we are able to get a new frame of data points every 0.011 seconds. This means that we are able to get 3 frames of data within 0.033 seconds which is lower than the 0.0667 second constraint.:
+
+~~~ math
+1 / 90 = 0.0111
+~~~
+
+~~~ math
+0.011 * 3 = 0.0333
+~~~
+
+#### 2 - Range
+
+#### 3 - Field of View
 
