@@ -289,6 +289,7 @@ The firing mechanism must change its position before the golf ball enters the ki
 #### Results
 
 #### 1 - Data Points
+
 We are only using the depth camera portion of the Intel D435 camera which has a frame rate of 90 frames per second. At that speed we are able to get a new frame of data points every 0.011 seconds. This means that we are able to get 3 frames of data within 0.033 seconds which is lower than the 0.0667 second constraint.:
 
 ~~~ math
@@ -303,3 +304,6 @@ We are only using the depth camera portion of the Intel D435 camera which has a 
 
 #### 3 - Field of View
 
+As you can see in the photo below you can clearly see the entirety of anchor 2 plus some. Therefore it passes this constraint.
+
+![Picture of Anchor 2](Video_Photos/sensor_fov.png)
