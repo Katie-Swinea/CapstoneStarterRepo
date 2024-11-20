@@ -254,6 +254,25 @@ For minimal functional prototype we only have 15 of the 30 set positions at this
 
 
 #### 2 - Safe Firing Speed/ Distance
+The six feet saftey requirement will be added to the back of the game board starting at the back of Anchor 1.
+|Attempt| Stayed within 6ft|
+|-----|-----|
+|1|Yes|
+|2|Jammed|
+|3|Yes|
+|4|Yes|
+|5|Yes|
+|6|Jammed|
+|7|Yes|
+|8|Yes|
+|9|Yes|
+|10|Yes|
+|11|Yes|
+|12|Jammed|
+|13|Yes|
+|14|Jammed|
+|15|Yes|
+
 
 #### 3 - Kill Zone
 The firing mechanism must change its position before the golf ball enters the kill zone. Like the Pre-Set location Constraint we only have 15 out of the 30 set positions.
