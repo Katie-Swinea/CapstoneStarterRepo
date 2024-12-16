@@ -1,10 +1,6 @@
 # Software
 
-For each of the sets of programs written, create a directory in the software folder. 
-
-Each software folder must contain a readme file detailing
-
-1. What the software does
-2. All dependencies
-3. How to Install
-4. How to run/How to use
+One set of software was created for the jeston nano and the primary processing of the system. Another was created for the adruino to control the mechanical part of
+the system. Both of these codes were uploaded to the respective hardware. A copy of the jetson nano code is stored here as well. The adruino code was developed while
+the mechanical team refined their system prior to integration. It has been housed on the adruino and is not stored here due to the different development history it
+had.
