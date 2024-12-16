@@ -17,8 +17,8 @@ the project was already being scaled down, the project was also turned into a co
 
 ## Capabilities
 
-The designs have not yet been completed and the project has not been built, so all the capabilities are theoritcal and proven through datasheets and analysis. The capabilities of the system will be updated
-through the design process and culminate in a final summary for the final design.
+This system is able to accurately detect, track, and aim at the incoming golfballs on the gameboard. It has been designed to mitigate false detections as much as possible. It is able to accurately intercept the
+ball a significant percent of the time.
 
 ## Salient Outcomes
 
@@ -30,8 +30,7 @@ from to achieve the goal of the project.
 
 ## Project Demonstration & Images
 
-This project has not yet been fully designed and built. Once the project has been built and can be properly demonstrated, video demonstartions will be shown
-via links. Picures of the project while it is not in use will also be included.
+The experimental analysis of this repository has several pictures of the capabilities of this project. The final presentation also has a video of the interceptor tracking and hitting the golfball.
 
 ## About Us
 
@@ -51,7 +50,7 @@ Kevin Ulrich: Computer Engineering major who focused on the research and calibra
 
 ### Faculty Supervisor
 
-The team's faculty supervisor is Dr. Jesse Roberts.
+The team's faculty supervisor was Dr. Jesse Roberts. The team's supervisor then became Micah Rentschler for the second semester.
 
 ### Stakeholders
 
@@ -60,7 +59,8 @@ The customer is Devcom who also created and proposed the project and competition
 ### Recognitions
 
 The team wants to acknowledge the contributions of the partnered Mechanical Engineering team. The team consists of: Ishak Lamei, Samuel Rainey, Steven
-Tucker, and Austin Williams.
+Tucker, and Austin Williams. The team would also like to thank Cooper Nelson for helping the team test different sensor options before ordering, Ethan Dixon who was a source of moral support through out the
+project, and Adam Morrow who was on the other team, but helped us finish construction of the gameboard and let us bounce ideas off of him.
 
 ## Repo Organization
 
@@ -83,5 +83,4 @@ Minutes are included in a repository here as well. Signoffs contains the approve
 
 ### Software
 
-This repository contains the necessary software and designed software for the project. The ReadMe in this section has not been changes since the team has
-not yet used the repository.
+This repository contains the necessary software and designed software for the project. All of theses softwares are already uploaded to the appropriate hardware.
